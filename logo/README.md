@@ -50,3 +50,17 @@ Yeniden üretmek için: `pip install fonttools && python3 scripts/build_logo.py`
 3. **Ekip** — Öne doğru büyüyen üç figür: perspektif + ekip + insan. Yeşil → mavi.
 
 Yeniden üretmek için: `python3 scripts/build_alternatives.py`
+
+## Konseptler — 2. tur (`konseptler/`)
+
+Ortak fikir: Türkçeye özgü **noktalı İ**. Noktası insanın başıdır (İK = **İ**nsan Kaynakları);
+yazıda da "İ"nin noktası vurgu rengindedir. `karsilastirma.png` üçünü yan yana gösterir.
+
+1. **İleri Adım** — "İ" ve "K" tek bir figürde birleşir: nokta baş, gövde beden, K'nin kolları
+   ileri uzanan kol ve atılan adım. Uçlara doğru incelen çizgiler perspektifi verir. Mesaj: insanı ileri taşıyan İK.
+2. **Kesişen Bakış** — Çalışan ve işveren, iki ayrı bakış açısı (iki renkli koni). Kesiştikleri koyu
+   alan ortak perspektiftir. Mesaj: İK iki tarafı ortak noktada buluşturur.
+3. **Kariyer Yolu** — Perspektifte ufka uzanan yol "İ"nin gövdesidir, ufuktaki turuncu nokta hem
+   insan hem hedef. Mesaj: her çalışanın kariyer yolculuğu.
+
+Yeniden üretmek için: `python3 scripts/build_konseptler.py`

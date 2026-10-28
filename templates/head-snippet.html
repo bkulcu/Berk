@@ -1,0 +1,47 @@
+<!-- ============================================================
+  İK Perspektif — her sayfanın <head> bölümüne eklenecek SEO/paylaşım şablonu.
+  {{...}} yerlerini sayfaya göre doldurun. Marka adını her yerde "İK Perspektif"
+  (büyük P) yazın. <title> için tek şablon: "Sayfa Adı | İK Perspektif".
+============================================================ -->
+
+<title>{{SAYFA_ADI}} | İK Perspektif</title>
+<meta name="description" content="{{150-160 KARAKTER OZET}}">
+<link rel="canonical" href="https://ikperspektif.com{{/mevcut/yol/}}">
+<meta name="robots" content="index,follow">
+
+<!-- Favicon (deploy/favicon.svg dosyasını kök dizine koyun) -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Open Graph (WhatsApp / LinkedIn / Facebook önizlemesi) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="İK Perspektif">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="{{SAYFA_ADI}} | İK Perspektif">
+<meta property="og:description" content="{{150-160 KARAKTER OZET}}">
+<meta property="og:url" content="https://ikperspektif.com{{/mevcut/yol/}}">
+<meta property="og:image" content="https://ikperspektif.com/og-image.png"><!-- 1200x630 -->
+
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{SAYFA_ADI}} | İK Perspektif">
+<meta name="twitter:description" content="{{150-160 KARAKTER OZET}}">
+<meta name="twitter:image" content="https://ikperspektif.com/og-image.png">
+
+<!-- Yapılandırılmış veri: yalnızca ANA SAYFADA bir kez -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "İK Perspektif",
+  "url": "https://ikperspektif.com/",
+  "logo": "https://ikperspektif.com/favicon.svg",
+  "description": "İnsan kaynakları süreçlerini tek merkezde toplayan uygulama platformu: performans/OKR, işe alım değerlendirme, eğitim, ücret ve bütçe, organizasyon ve analitik.",
+  "areaServed": "TR",
+  "knowsLanguage": "tr"
+}
+</script>
+
+<!-- JS kapalıyken en azından bir mesaj görünsün (SPA sayfaları için <body> içine) -->
+<!-- <noscript>Bu uygulama çalışmak için JavaScript gerektirir. Lütfen JavaScript'i etkinleştirin.</noscript> -->

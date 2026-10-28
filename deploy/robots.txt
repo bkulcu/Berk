@@ -1,0 +1,9 @@
+# İK Perspektif robots.txt — kök dizine yükleyin: https://ikperspektif.com/robots.txt
+User-agent: *
+Allow: /
+
+# Kiracıya özel / demo alanlarını aramaya kapatmak isterseniz örnek:
+# Disallow: /projeler/teknopark-istanbul-intranet/
+# Disallow: /projeler/toplanti-asistani/
+
+Sitemap: https://ikperspektif.com/sitemap.xml

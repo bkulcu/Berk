@@ -40,3 +40,13 @@ Yazılar vektöre çevrilmiştir, font yüklemeye gerek yoktur (font: Inter, OFL
 ```
 
 Yeniden üretmek için: `pip install fonttools && python3 scripts/build_logo.py`
+
+## Alternatif konseptler (`alternatifler/`)
+
+`karsilastirma.png` üç alternatifi yan yana gösterir. Her biri için yatay logo ve ikon (favicon) var.
+
+1. **Mercek** — Göz şeklinde bir mercek, irisinde insan silüeti: "insana odaklanan bakış açısı". Mor → pembe, küçük harfli modern yazı.
+2. **Monogram** — Kalın bir "P"; iç boşluğundaki turuncu nokta odaktaki insanı, köşedeki kare dijital pikseli temsil eder. Lacivert + turuncu, büyük harfli kurumsal yazı.
+3. **Ekip** — Öne doğru büyüyen üç figür: perspektif + ekip + insan. Yeşil → mavi.
+
+Yeniden üretmek için: `python3 scripts/build_alternatives.py`

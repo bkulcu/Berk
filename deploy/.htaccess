@@ -1,0 +1,55 @@
+# ============================================================
+#  İK Perspektif — güvenlik başlıkları + markalı hata sayfaları
+#  LiteSpeed/Apache için. Kök dizine (.htaccess) ekleyin veya
+#  mevcut .htaccess ile birleştirin. Plesk > Apache & nginx
+#  Settings > "Additional directives" alanına da konabilir.
+# ============================================================
+
+# --- HTTPS zorla ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Güvenlik başlıkları ---
+<IfModule mod_headers.c>
+  # HTTPS'i tarayıcıya kalıcı zorlat (önce test edin; 1 gün ile başlayıp artırın)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(self), payment=()"
+
+  # CSP — AI mülakat sesi için ElevenLabs/mikrofon kullanılıyor.
+  # ÖNCE Report-Only ile test edin, konsolda ihlal kalmayınca aşağıdaki
+  # satırı "Content-Security-Policy" olarak açın.
+  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://*.elevenlabs.io; media-src 'self' blob: data:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+
+  # Teknoloji yığınını ifşa eden başlığı gizle
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+</IfModule>
+
+# --- Hassas dosyalara erişimi engelle ---
+<FilesMatch "(^\.|\.(env|ini|log|sql|bak|old|swp|dist|json)$|~$)">
+  Require all denied
+</FilesMatch>
+# .json API yanıtları gerekiyorsa yukarıdaki listeden json'u çıkarın; örnek/yedek
+# .json dosyalarını ayrı bir korumalı klasörde tutmanız önerilir.
+RedirectMatch 404 (?i)/\.git
+
+# --- Markalı hata sayfaları ---
+ErrorDocument 404 /404.html
+ErrorDocument 401 /404.html
+ErrorDocument 500 /404.html
+
+# --- Varlık önbelleği (statikler) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

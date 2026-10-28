@@ -1,31 +1,36 @@
 # İK Perspektif — Logo Seti
 
-**Konsept:** Sembol, perspektif ızgarasından oluşan bir gövde ve başı olan bir insan figürüdür.
-Izgara çizgileri başa doğru daralır; baş aynı zamanda perspektifin *kaçış noktasıdır*.
-Mesaj: **insanı merkeze alan dijital bir bakış açısı** — dijital İK projeleri.
+![Önizleme](onizleme.png)
+
+**Konsept — "İleri Adım":** "İ" ve "K" harfleri tek bir insan figüründe birleşir.
+Türkçeye özgü İ'nin noktası insanın başı (İK = **İ**nsan Kaynakları), gövdesi bedenidir;
+K'nin kolları ileri uzanan bir kol ve atılan bir adımdır. Uca doğru incelen kollar perspektifi verir.
+Mesaj: **insanı ileri taşıyan, dijital bir İK bakış açısı.** Yazıdaki "İ"nin turuncu noktası sembolle aynı hikâyeyi taşır.
 
 ## Dosyalar
 
 | Dosya | Kullanım |
 |---|---|
-| `ik-perspektif-logo.svg` | Ana logo (slogan ile) — açık zemin |
-| `ik-perspektif-logo-koyu.svg` | Koyu zemin versiyonu |
-| `ik-perspektif-logo-sade.svg` | Slogansız yatay logo — site başlığı (header) |
-| `ik-perspektif-logo-dikey.svg` | Dikey/ortalı logo |
-| `ik-perspektif-ikon.svg` | Sadece sembol |
+| `ik-perspektif-logo.svg` | Ana logo (sloganlı) — açık zemin |
+| `ik-perspektif-logo-sade.svg` | Slogansız — site başlığı (header) |
+| `ik-perspektif-logo-koyu.svg` / `-koyu-sade.svg` | Koyu zemin versiyonları |
+| `ik-perspektif-logo-dikey.svg` / `-dikey-koyu.svg` | Dikey/ortalı logo |
+| `ik-perspektif-ikon.svg` | Sadece sembol (şeffaf zemin) |
 | `favicon.svg` | Favicon / uygulama & sosyal medya profil ikonu |
-| `png/` | PNG çıktılar (favicon-32, apple-touch-icon 180, ikon 512, yüksek çözünürlüklü logolar) |
+| `png/` | PNG çıktılar: favicon-32, apple-touch-icon (180), ikon 512, sembol 512, yüksek çözünürlüklü logolar |
 
 Yazılar vektöre çevrilmiştir, font yüklemeye gerek yoktur (font: Inter, OFL lisanslı).
+Logonun çevresinde en az "İ" noktası çapı kadar boşluk bırakın; sembolü döndürmeyin, renklerini değiştirmeyin.
 
 ## Renkler
 
-| Ad | HEX |
-|---|---|
-| Lacivert (İndigo) | `#1E2A78` |
-| Turkuaz | `#14B8A6` |
-| Gri (slogan) | `#64748B` |
-| Turkuaz — koyu zemin | `#5EEAD4` |
+| Ad | HEX | Kullanım |
+|---|---|---|
+| Gece Laciverti | `#172554` | Ana renk, yazı, sembol gövdesi |
+| Perspektif Mavisi | `#3B82F6` | Kolların uç rengi (gradyan) |
+| Amber | `#F59E0B` | Vurgu: İ noktası / baş |
+| Gri | `#64748B` | Slogan |
+| Açık Mavi (koyu zemin) | `#60A5FA` | Koyu zeminde kol uçları |
 
 ## Siteye ekleme
 
@@ -40,6 +45,8 @@ Yazılar vektöre çevrilmiştir, font yüklemeye gerek yoktur (font: Inter, OFL
 ```
 
 Yeniden üretmek için: `pip install fonttools && python3 scripts/build_logo.py`
+
+İlk tasarım `arsiv/ilk-tasarim/` klasöründe saklanmaktadır.
 
 ## Alternatif konseptler (`alternatifler/`)
 

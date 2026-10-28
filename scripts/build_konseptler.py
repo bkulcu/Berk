@@ -4,28 +4,11 @@ Ortak fikir: Türkçeye özgü noktalı "İ". Noktası insanın başı; İK = İ
 Yazıda da "İ"nin noktası vurgu rengindedir.
 Çalıştırma: pip install fonttools && python3 scripts/build_konseptler.py
 """
-import math
-
-from build_logo import OUT, svg, text_path
+from build_logo import OUT, svg, tapered, text_path
 
 KONSEPT_OUT = OUT / "konseptler"
 INK = "#172554"
 GRAY = "#64748B"
-
-
-def tapered(x1, y1, x2, y2, w1, w2):
-    """Başlangıçta kalın, uca doğru incelen (perspektifte uzaklaşan) yuvarlak uçlu çizgi."""
-    dx, dy = x2 - x1, y2 - y1
-    n = math.hypot(dx, dy)
-    px, py = -dy / n, dx / n
-    a = (x1 + px * w1 / 2, y1 + py * w1 / 2)
-    b = (x2 + px * w2 / 2, y2 + py * w2 / 2)
-    c = (x2 - px * w2 / 2, y2 - py * w2 / 2)
-    d = (x1 - px * w1 / 2, y1 - py * w1 / 2)
-    r1, r2 = w1 / 2, w2 / 2
-    return (f"M{a[0]:.2f} {a[1]:.2f}L{b[0]:.2f} {b[1]:.2f}L{c[0]:.2f} {c[1]:.2f}L{d[0]:.2f} {d[1]:.2f}z"
-            f"M{x2 - r2:.2f} {y2}a{r2} {r2} 0 1 0 {2 * r2:.2f} 0a{r2} {r2} 0 1 0 {-2 * r2:.2f} 0z"
-            f"M{x1 - r1:.2f} {y1}a{r1} {r1} 0 1 0 {2 * r1:.2f} 0a{r1} {r1} 0 1 0 {-2 * r1:.2f} 0z")
 
 
 KONSEPTLER = {

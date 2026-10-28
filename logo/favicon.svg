@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="İK Perspektif"><title>İK Perspektif</title><defs><linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#14B8A6"/><stop offset="1" stop-color="#1E2A78"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#g)"/><g transform="translate(9 8) scale(0.72)">
+  <circle cx="32" cy="14" r="7.5" fill="#FFFFFF"/>
+  <path d="M24.6 26h14.8a3 3 0 0 1 2.7 1.7l12.6 25.4A2 2 0 0 1 52.9 56H11.1a2 2 0 0 1-1.8-2.9l12.6-25.4a3 3 0 0 1 2.7-1.7z" fill="#FFFFFF"/>
+  <g stroke="#1E2A78" stroke-width="2.6" stroke-linecap="round" opacity="0.85" fill="none">
+    <path d="M16.5 37.5h31M12.3 46.5h39.4"/>
+    
+  </g></g>
+</svg>
